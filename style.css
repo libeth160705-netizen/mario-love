@@ -1,0 +1,646 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+body{
+
+    margin:0;
+
+    overflow:hidden;
+
+    font-family:Arial,sans-serif;
+
+    background:#69b8ff;
+
+}
+
+
+
+/* =========================
+   INICIO
+========================= */
+
+
+#inicio{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:linear-gradient(#5ec8ff,#bdefff);
+
+    z-index:100;
+
+}
+
+
+
+#inicio h1{
+
+    font-size:50px;
+
+    color:#ff4d6d;
+
+    text-shadow:3px 3px white;
+
+}
+
+
+#inicio h2{
+
+    color:#ffd700;
+
+}
+
+
+#inicio p{
+
+    font-size:25px;
+
+}
+
+
+
+
+
+button{
+
+    padding:20px 40px;
+
+    font-size:25px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    background:#ff3366;
+
+    color:white;
+
+}
+
+
+
+
+
+/* =========================
+   JUEGO
+========================= */
+
+
+#juego{
+
+    display:none;
+
+    width:100vw;
+
+    height:100vh;
+
+    position:relative;
+
+}
+
+
+
+
+
+#cielo{
+
+    position:relative;
+
+    width:100%;
+
+    height:85%;
+
+    background:linear-gradient(#5ec8ff,#bdefff);
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+#suelo{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    height:15%;
+
+    background:#42b72a;
+
+    border-top:10px solid #8b4513;
+
+}
+
+
+
+
+
+/* =========================
+   PERSONAJES
+========================= */
+
+
+#mario{
+
+    position:absolute;
+
+    left:40px;
+
+    bottom:50px;
+
+    font-size:80px;
+
+    z-index:20;
+
+    transition:.15s;
+
+}
+
+
+
+
+
+#princesa{
+
+    position:absolute;
+
+    right:80px;
+
+    bottom:50px;
+
+    font-size:80px;
+
+    z-index:20;
+
+}
+
+
+
+
+
+/* =========================
+   NUBES
+========================= */
+
+
+.nube{
+
+    position:absolute;
+
+    font-size:80px;
+
+    animation:moverNube 15s linear infinite;
+
+}
+
+
+
+.nube1{
+
+    top:40px;
+
+    left:-100px;
+
+}
+
+
+
+.nube2{
+
+    top:120px;
+
+    left:300px;
+
+    animation-duration:18s;
+
+}
+
+
+
+.nube3{
+
+    top:70px;
+
+    left:700px;
+
+    animation-duration:20s;
+
+}
+
+
+
+@keyframes moverNube{
+
+from{
+
+transform:translateX(-150px);
+
+}
+
+to{
+
+transform:translateX(1200px);
+
+}
+
+}
+
+
+
+
+
+/* =========================
+   MONEDAS
+========================= */
+
+
+.moneda{
+
+    position:absolute;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+    z-index:15;
+
+    animation:flotar 1s infinite alternate;
+
+}
+
+
+
+#moneda1{
+
+    left:250px;
+
+    bottom:80px;
+
+}
+
+
+
+#moneda2{
+
+    left:450px;
+
+    bottom:80px;
+
+}
+
+
+
+#moneda3{
+
+    left:650px;
+
+    bottom:80px;
+
+}
+
+
+
+#moneda4{
+
+    left:850px;
+
+    bottom:80px;
+
+}
+
+
+
+
+
+@keyframes flotar{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+
+
+
+
+/* =========================
+   DECORACIÓN
+========================= */
+
+
+.tubo{
+
+    position:absolute;
+
+    bottom:40px;
+
+    left:600px;
+
+    font-size:80px;
+
+}
+
+
+
+.castillo{
+
+    position:absolute;
+
+    bottom:30px;
+
+    right:40px;
+
+    font-size:100px;
+
+}
+
+
+
+
+
+.corazon{
+
+    position:absolute;
+
+    font-size:35px;
+
+    animation:latir 1s infinite alternate;
+
+}
+
+
+
+.corazon1{
+
+    left:150px;
+
+    top:250px;
+
+}
+
+
+.corazon2{
+
+    left:450px;
+
+    top:220px;
+
+}
+
+
+.corazon3{
+
+    left:750px;
+
+    top:260px;
+
+}
+
+
+
+
+
+@keyframes latir{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.3);
+
+}
+
+}
+
+
+
+
+
+/* =========================
+   CARTA DE MONEDAS
+========================= */
+
+
+#recuerdo{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.75);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:200;
+
+}
+
+
+
+
+
+.carta{
+
+    background:white;
+
+    width:600px;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 0 30px black;
+
+}
+
+
+
+
+
+#fotoRecuerdo{
+
+    width:350px;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+#tituloRecuerdo{
+
+    color:#ff4d6d;
+
+}
+
+
+
+#textoRecuerdo{
+
+    font-size:22px;
+
+    line-height:1.5;
+
+}
+
+
+
+
+
+/* =========================
+   CARTA FINAL PRINCESA
+========================= */
+
+
+#cartaFinal{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.8);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:500;
+
+}
+
+
+
+
+
+.cartaAmor{
+
+    background:white;
+
+    width:650px;
+
+    max-height:80vh;
+
+    overflow:auto;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:0 0 30px #ff4d6d;
+
+}
+
+
+
+
+
+.cartaAmor h1{
+
+    font-size:40px;
+
+    color:#ff4d6d;
+
+}
+
+
+
+
+
+.cartaAmor p{
+
+    font-size:22px;
+
+    line-height:1.6;
+
+}
+
+
+
+
+
+/* =========================
+   MÚSICA
+========================= */
+
+
+#sonido{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    z-index:600;
+
+    font-size:18px;
+
+    padding:12px 20px;
+
+}
