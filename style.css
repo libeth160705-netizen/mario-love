@@ -169,7 +169,7 @@ button{
 
     position:absolute;
 
-    left:40px;
+    left:5%;
 
     bottom:50px;
 
@@ -189,7 +189,7 @@ button{
 
     position:absolute;
 
-    right:80px;
+    right:8%;
 
     bottom:50px;
 
@@ -297,32 +297,38 @@ transform:translateX(1200px);
 
 #moneda1{
 
-    left:250px;
+    left:15%;
 
-    bottom:80px;
+    bottom:25%;
 
 }
-
 
 
 #moneda2{
 
-    left:450px;
+    left:35%;
 
-    bottom:80px;
+    bottom:25%;
 
 }
-
 
 
 #moneda3{
 
-    left:650px;
+    left:55%;
 
-    bottom:80px;
+    bottom:25%;
 
 }
 
+
+#moneda4{
+
+    left:75%;
+
+    bottom:25%;
+
+}
 
 
 #moneda4{
@@ -368,7 +374,7 @@ transform:translateY(-10px);
 
     bottom:40px;
 
-    left:600px;
+    left:45%;
 
     font-size:80px;
 
@@ -382,7 +388,7 @@ transform:translateY(-10px);
 
     bottom:30px;
 
-    right:40px;
+    right:5%;
 
     font-size:100px;
 
@@ -491,15 +497,23 @@ transform:scale(1.3);
 
     background:white;
 
-    width:600px;
+    width:85%;
 
-    padding:40px;
+    max-width:600px;
+
+    max-height:85vh;
+
+    overflow-y:auto;
+
+    padding:25px;
 
     border-radius:25px;
 
     text-align:center;
 
     box-shadow:0 0 30px black;
+
+    box-sizing:border-box;
 
 }
 
@@ -509,11 +523,11 @@ transform:scale(1.3);
 
 #fotoRecuerdo{
 
-    width:350px;
+    width:80%;
 
-    height:350px;
+    max-width:300px;
 
-    object-fit:cover;
+    height:auto;
 
     border-radius:20px;
 
@@ -533,7 +547,7 @@ transform:scale(1.3);
 
 #textoRecuerdo{
 
-    font-size:22px;
+    font-size:18px;
 
     line-height:1.5;
 
@@ -693,5 +707,14 @@ transform:scale(1.3);
 #controles button:active{
 
     transform:scale(.95);
+
+}
+#cerrarRecuerdo{
+
+    margin-top:20px;
+
+    width:80%;
+
+    font-size:20px;
 
 }
