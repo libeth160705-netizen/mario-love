@@ -644,3 +644,54 @@ transform:scale(1.3);
     padding:12px 20px;
 
 }
+/* =========================
+   CONTROLES PARA CELULAR
+========================= */
+
+#controles{
+
+    position:fixed;
+
+    bottom:20px;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    box-sizing:border-box;
+
+    z-index:1000;
+
+}
+
+#controles button{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    border:none;
+
+    font-size:40px;
+
+    background:rgba(255,255,255,.85);
+
+    box-shadow:0 5px 10px rgba(0,0,0,.3);
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+#controles button:active{
+
+    transform:scale(.95);
+
+}

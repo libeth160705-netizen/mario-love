@@ -384,3 +384,48 @@ sonido.onclick=function(){
 
 
 };
+// ===============================
+// CONTROLES PARA CELULAR
+// ===============================
+
+const btnIzquierda = document.getElementById("izquierda");
+const btnDerecha = document.getElementById("derecha");
+
+function moverMario(direccion){
+
+    if(direccion === "derecha"){
+        posicion += 20;
+    }
+
+    if(direccion === "izquierda"){
+        posicion -= 20;
+    }
+
+    if(posicion < 0){
+        posicion = 0;
+    }
+
+    if(posicion > window.innerWidth - 100){
+        posicion = window.innerWidth - 100;
+    }
+
+    mario.style.left = posicion + "px";
+
+    revisarMonedas();
+
+    revisarPrincesa();
+
+}
+
+// Eventos para celular
+btnDerecha.addEventListener("click", function(){
+
+    moverMario("derecha");
+
+});
+
+btnIzquierda.addEventListener("click", function(){
+
+    moverMario("izquierda");
+
+});

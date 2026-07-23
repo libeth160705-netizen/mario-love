@@ -1,0 +1,16 @@
+{
+  "name": "Mario Love ❤️",
+  "short_name": "Mario Love",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#5ec8ff",
+  "theme_color": "#ff4d6d",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "icono.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -10,6 +10,8 @@
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="manifest" href="manifest.json">
+
 </head>
 
 
@@ -257,11 +259,26 @@
     🎵 Música
 </button>
 
+<div id="controles">
 
+    <button id="izquierda">
+        ⬅️
+    </button>
+
+    <button id="derecha">
+        ➡️
+    </button>
+
+</div>
 
 
 <script src="script.js"></script>
 
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+}
+</script>
 
 </body>
 
